@@ -1,0 +1,5 @@
+{
+  "name": "VoxPulse - AI Voice Dashboard",
+  "description": "A white-label AI voice agent dashboard featuring call analytics, recording management, and Gemini-powered sentiment analysis.",
+  "requestFramePermissions": []
+}

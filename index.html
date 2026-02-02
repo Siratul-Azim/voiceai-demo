@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoxPulse - AI Voice Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              ios: {
+                blue: '#007AFF',
+                green: '#34C759',
+                indigo: '#5856D6',
+                orange: '#FF9500',
+                pink: '#FF2D55',
+                purple: '#AF52DE',
+                red: '#FF3B30',
+                teal: '#5AC8FA',
+                yellow: '#FFCC00',
+                gray: '#8E8E93',
+                gray2: '#AEAEB2',
+                gray3: '#C7C7CC',
+                gray4: '#D1D1D6',
+                gray5: '#E5E5EA',
+                gray6: '#F2F2F7',
+              }
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '2.5rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #F2F2F7; /* iOS Light Background */
+        overflow-x: hidden;
+      }
+      .dark body {
+        background-color: #000000;
+      }
+
+      /* iOS-like Mesh Gradient Background */
+      .mesh-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+                    radial-gradient(circle at 85% 30%, rgba(88, 86, 214, 0.15), rgba(0, 0, 0, 0));
+      }
+      .dark .mesh-bg {
+         background: radial-gradient(circle at 15% 50%, rgba(29, 29, 31, 1), rgba(0, 0, 0, 1)),
+                    radial-gradient(circle at 85% 30%, rgba(88, 86, 214, 0.2), rgba(0, 0, 0, 0));
+      }
+
+      /* Glassmorphism Utilities */
+      .ios-glass {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .dark .ios-glass {
+        background: rgba(30, 30, 30, 0.60);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .ios-card-hover {
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .ios-card-hover:hover {
+        transform: scale(1.02);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
